@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 rootProject.name = "D4Insight"
 include ':app'
 include ':workmanagerlib'
+include ':BuilderPattern'
