@@ -7,9 +7,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 import sud.bhatt.d4insight.constants.Constants
-import sud.bhatt.d4insight.logger.UNI_TAG
-import sud.bhatt.d4insight.logger.debugLogger
-import sud.bhatt.d4insight.logger.exceptionLogger
+import sud.bhatt.d4insight.utils.UNI_TAG
+import sud.bhatt.d4insight.utils.debugLogger
+import sud.bhatt.d4insight.utils.exceptionLogger
 import sud.bhatt.d4insight.view.weather.model.CityName
 import sud.bhatt.d4insight.view.weather.model.CityWeatherDetails
 import java.util.concurrent.TimeUnit

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/**
+ * Created by Hitesh K. Rampure on 21/12/21
+ * Contains UI logic to Hold the Menu & Content fragments
+ */
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_day_night"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0"
+        android:layout_weight="1"
+        android:background="@color/background_color_day_night"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/system_menu_container"
+            android:layout_width="@dimen/dimen_250"
+            android:layout_height="match_parent"
+            android:background="@color/background_color_day_night"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/layoutTitleHeaderText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen_64"
+                android:textAllCaps="false"
+                android:textSize="@dimen/sp_20" />
+
+            <RelativeLayout
+                android:id="@+id/switchBarHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_54"
+                android:layout_marginTop="@dimen/dimen_18"
+                android:layout_marginEnd="@dimen/dimen_32"
+                android:visibility="visible">
+
+                <TextView
+                    android:text="helllooo"
+                    android:id="@+id/switchBarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/sp_16" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_31"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_44"
+                android:background="@color/background_color_day_night">
+
+                <ProgressBar
+                    android:id="@+id/progressDialog"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/shimmer_include_1" />
+
+                        <include layout="@layout/shimmer_include_2" />
+
+                        <include layout="@layout/shimmer_include_1" />
+
+                        <include layout="@layout/shimmer_include_2" />
+
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="100"
+                    tools:listitem="@layout/fragment_weather_item" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

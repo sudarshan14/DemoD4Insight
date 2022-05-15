@@ -1,4 +1,4 @@
-package sud.bhatt.d4insight.logger
+package sud.bhatt.d4insight.utils
 
 import android.util.Log
 

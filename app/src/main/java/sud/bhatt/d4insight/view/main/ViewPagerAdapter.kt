@@ -4,8 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import sud.bhatt.d4insight.logger.UNI_TAG
-import sud.bhatt.d4insight.logger.debugLogger
+import sud.bhatt.d4insight.utils.UNI_TAG
+import sud.bhatt.d4insight.utils.debugLogger
 import sud.bhatt.d4insight.view.chat.ChatFragment
 import sud.bhatt.d4insight.view.weather.WeatherFragment
 

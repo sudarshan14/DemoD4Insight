@@ -10,10 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import sud.bhatt.d4insight.databinding.FragmentWeatherBinding
-import sud.bhatt.d4insight.logger.UNI_TAG
-import sud.bhatt.d4insight.logger.debugLogger
+import sud.bhatt.d4insight.locolstorage.WeatherDatabase
 import sud.bhatt.d4insight.networking.RetrofitService
 import sud.bhatt.d4insight.repository.DataSourceRepository
+import sud.bhatt.d4insight.utils.UNI_TAG
+import sud.bhatt.d4insight.utils.debugLogger
 
 class WeatherFragment : Fragment(), CellClickListener {
 
@@ -22,7 +23,8 @@ class WeatherFragment : Fragment(), CellClickListener {
 
     private lateinit var viewModel: WeatherViewModel
     private val adapter = WeatherAdapter(this)
-
+    lateinit var database: WeatherDatabase
+    lateinit var database2: WeatherDatabase
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         debugLogger(UNI_TAG, "onViewCreated")
@@ -37,9 +39,12 @@ class WeatherFragment : Fragment(), CellClickListener {
         val view = binding.root
 
         binding.recyclerview.adapter = adapter
-
+        database = WeatherDatabase.getDatabase(requireContext())
+        database2 = WeatherDatabase.getDatabase(requireContext())
         val retrofitService = RetrofitService.retrofitService
-        val mainRepository = DataSourceRepository(retrofitService)
+        val retrofitService2 = RetrofitService.retrofitService
+
+        val mainRepository = DataSourceRepository(retrofitService, database)
 
         viewModel = ViewModelProvider(
             this,

@@ -1,6 +1,9 @@
 package sud.bhatt.d4insight.view.main
 
+import android.os.Build
 import android.os.Bundle
+import android.telephony.TelephonyManager
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -12,24 +15,25 @@ class MainActivity : AppCompatActivity() {
 
     /** tabsArray can be received from array resources.
      * but for simplicity using hard coded array*/
-    private val tabsArray = arrayOf(
-        "Chat",
-        "Weather",
-    )
-
+    private lateinit var tabsArray :Array<Int>
+    private var mTelephonyManager: TelephonyManager? = null
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        mTelephonyManager = getSystemService(TELEPHONY_SERVICE) as TelephonyManager
+        val simState1 = mTelephonyManager!!.getSimState(0)
+        val simState2 = mTelephonyManager!!.getSimState(1)
+        tabsArray = arrayOf(simState1,simState2)
         val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager, lifecycle, tabsArray.size)
         binding.viewPager.adapter = viewPagerAdapter
 //        binding.viewPager.offscreenPageLimit
 
         val tabs: TabLayout = binding.tabs
         TabLayoutMediator(tabs, binding.viewPager) { tab, position ->
-            tab.text = tabsArray[position]
+            tab.text = tabsArray[position].toString()
         }.attach()
 
     }

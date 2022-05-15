@@ -3,10 +3,10 @@ package sud.bhatt.d4insight.view.weather
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.*
-import sud.bhatt.d4insight.logger.UNI_TAG
-import sud.bhatt.d4insight.logger.debugLogger
-import sud.bhatt.d4insight.logger.exceptionLogger
 import sud.bhatt.d4insight.repository.DataSourceRepository
+import sud.bhatt.d4insight.utils.UNI_TAG
+import sud.bhatt.d4insight.utils.debugLogger
+import sud.bhatt.d4insight.utils.exceptionLogger
 import sud.bhatt.d4insight.view.weather.model.CityName
 import sud.bhatt.d4insight.view.weather.model.CityWeatherDetails
 
@@ -43,8 +43,8 @@ class WeatherViewModel(private val repository: DataSourceRepository) : ViewModel
         }
     }
 
-    fun getWeatherDetails(cityName:String?) {
-        try {
+    fun getWeatherDetails(cityName: String?) {
+      //  try {
             job = CoroutineScope(Dispatchers.IO + exceptionHandler).launch {
                 loading.postValue(true)
                 val response = repository.getCityWeatherDetails(cityName)
@@ -60,9 +60,9 @@ class WeatherViewModel(private val repository: DataSourceRepository) : ViewModel
                     }
                 }
             }
-        } catch (e: Exception) {
-            exceptionLogger(UNI_TAG, "error while fetching data from api", e)
-        }
+//        } catch (e: Exception) {
+//            exceptionLogger(UNI_TAG, "error while fetching data from api", e)
+//        }
     }
 
 

@@ -13,17 +13,19 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/drawable/ic_action_back_24.xml" value="0.119" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/drawable/ic_action_send_24.xml" value="0.119" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/activity_network_settings.xml" value="0.17794253938832252" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_chat.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_chat_item.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_chat_item_container_received_message.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_chat_item_container_sent_message.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_chat_shimmer.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_main.xml" value="0.1796875" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_weather.xml" value="0.1796875" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_weather.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_weather_card.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_weather_card_view_layout.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_weather_copy.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_weather_item.xml" value="0.1796875" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/fragment_weather_test.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/shimmer_include_1.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/shimmer_include_2.xml" value="0.1796875" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/D4Insight/app/src/main/res/layout/weather_info_item.xml" value="0.1" />
