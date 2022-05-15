@@ -5,4 +5,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="type_message">Type mesage</string>
+    <string name="description_image">Sudarshan Bhatt</string>
+    <string name="blur_title">Select Blur Amount</string>
+    <string name="blur_lv_1">A little Blurred</string>
+    <string name="blur_lv_2">More Blurred</string>
+    <string name="blur_lv_3">The Most Blurred</string>
+    <string name="cancel_work">Cancel</string>
+    <string name="go">Go</string>
+    <string name="see_file">See File</string>
 </resources>

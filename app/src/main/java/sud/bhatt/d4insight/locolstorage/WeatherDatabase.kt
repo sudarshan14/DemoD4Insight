@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [WeatherInfo::class, CityInfo::class], version = 3)
+@Database(entities = [WeatherInfo::class, CityInfo::class], version = 1)
 @TypeConverters(DateTypeConvertor::class)
 abstract class WeatherDatabase : RoomDatabase() {
 

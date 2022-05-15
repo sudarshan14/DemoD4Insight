@@ -25,6 +25,7 @@ class WeatherFragment : Fragment(), CellClickListener {
     private val adapter = WeatherAdapter(this)
     lateinit var database: WeatherDatabase
     lateinit var database2: WeatherDatabase
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         debugLogger(UNI_TAG, "onViewCreated")
