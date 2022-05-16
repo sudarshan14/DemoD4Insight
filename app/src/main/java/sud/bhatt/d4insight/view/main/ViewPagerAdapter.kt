@@ -6,6 +6,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import sud.bhatt.d4insight.utils.UNI_TAG
 import sud.bhatt.d4insight.utils.debugLogger
+import sud.bhatt.d4insight.view.blur.BlurFragment
 import sud.bhatt.d4insight.view.chat.ChatFragment
 import sud.bhatt.d4insight.view.weather.WeatherFragment
 
@@ -26,7 +27,8 @@ class ViewPagerAdapter(
         debugLogger(UNI_TAG, "createFragment viewpager")
         return when (position) {
             0 -> ChatFragment()
-            else -> WeatherFragment()
+            1 -> WeatherFragment()
+            else -> BlurFragment.newInstance()
         }
 
     }
